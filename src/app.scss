@@ -1,0 +1,56 @@
+/* Style de la barre de défilement */
+
+/* Largeur */
+::-webkit-scrollbar {
+  width: 12px; /* Vous pouvez ajuster la largeur selon vos préférences */
+}
+
+/* Track (le fond de la barre de défilement) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Couleur de fond */
+}
+
+/* Handle (la "poignée" de la barre de défilement) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Couleur de la poignée */
+  border-radius: 6px; /* Coins arrondis de la poignée */
+}
+
+/* Handle on hover (style au survol) */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Couleur de la poignée au survol */
+}
+
+html {
+  -webkit-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+  -webkit-scroll-snap-align: center;
+  scroll-snap-align: center;
+}
+
+/* app.scss */
+
+/* Styles généraux */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM sans", sans-serif;
+}
+
+body {
+  // background-color: #0c0c1d;
+  background: linear-gradient(to left, #0c0c1d, #000000e5); /* Gradient de #0c0c1d vers le noir de droite à gauche */
+  color: lightgray;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; //parent is body == lignthgray
+}
