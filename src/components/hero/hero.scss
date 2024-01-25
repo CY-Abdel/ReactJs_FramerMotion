@@ -4,17 +4,90 @@
   overflow: hidden;
   position: relative;
 
+  .wrapper {
+    width: 1100px;
+    height: 100%;
+    margin: auto;
+
+    .textContainer {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+
+      h2 {
+        font-size: 30px;
+        color: rebeccapurple;
+        letter-spacing: 10px;
+      }
+
+      h1 {
+        font-size: 78px;
+      }
+
+      .buttons {
+        button {
+          padding: 20px;
+          border: 1px solid white;
+          background-color: transparent;
+          border-radius: 10px;
+          color: whitesmoke;
+          margin-right: 20px;
+          font-weight: 300;
+          cursor: pointer;
+        }
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .slidingTextContainer {
+    position: absolute;
+    font-size: 40vh;
+    bottom: -70px;
+    white-space: nowrap;
+    // La propriété CSS "white-space: nowrap;" est utilisée pour spécifier qu'un élément HTML ne doit pas avoir de retour à la ligne automatique. Cela signifie que le texte à l'intérieur de l'élément ne sera pas enroulé sur plusieurs lignes, même s'il dépasse la largeur de son conteneur. Au lieu de cela, le texte restera sur une seule ligne et débordera éventuellement de son conteneur.
+
+    color: #ffffff09;
+    font-weight: bold;
+
+    /* Masquer tout texte débordant du conteneur */
+    // overflow: hidden;
+    width: 100%; /* Assurer que le conteneur prend toute la largeur disponible */
+
+    /* Empêcher le texte en cours de défilement de réagir aux événements de pointer */
+    pointer-events: none;
+
+    .slidingTextWrapper {
+      display: inline-block; /* Permettre aux divs de s'aligner horizontalement */
+      animation: slide 20s linear infinite; /* Utiliser l'animation "slide" avec une durée de 10 secondes, linéaire et infinie */
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      } /* Commencer le texte au début */
+      100% {
+        transform: translateX(-100%);
+      } /* Déplacer le texte complètement hors de la vue vers la gauche */
+    }
+  }
+
   .imageContainer {
     height: 100%;
     position: absolute;
     top: 0;
     right: 0;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-
 }
