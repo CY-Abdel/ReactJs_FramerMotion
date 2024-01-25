@@ -5,12 +5,14 @@ import "./app.scss"
 import Navbar from './components/navbar/Navbar';
 import TestFramerMotion from './TestFramerMotion';
 import Sidebar from './components/sidebar/Sidebar';
+import Hero from './components/hero/Hero';
 
 const App = () => {
   return (
     <div>
       <section id='Home'>
         <Navbar />
+        <Hero />
       </section>
       <section id='About'>About</section>
       <section id='Service'>Services</section>
