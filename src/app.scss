@@ -55,31 +55,33 @@ a {
   color: inherit; //parent is body == lignthgray
 }
 
-.course {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  .box {
-    width: 200px;
-    height: 200px;
-    background-color: #fff;
 
-    // ***** avec framer-motion *******
-    // <motion.div className="box" animate={{ opacity: 0 }} transition={{ duration: 2 }}></motion.div>
+// .course {
+//   height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
 
-    // ***** avec css *****
-    // opacity: 1; // Opacité initiale à 1
-    // animation: fadeOut 2s 2S forwards; // Utilisation de l'animation fadeOut pendant 2 secondes
+//   .box {
+//     width: 200px;
+//     height: 200px;
+//     background-color: #fff;
 
-    // @keyframes fadeOut {
-    //   from {
-    //     opacity: 1; // Opacité de départ
-    //   }
-    //   to {
-    //     opacity: 0; // Opacité finale
-    //   }
-    // }
-  }
-}
+//     // ***** avec framer-motion *******
+//     // <motion.div className="box" animate={{ opacity: 0 }} transition={{ duration: 2 }}></motion.div>
+
+//     // ***** avec css *****
+//     // opacity: 1; // Opacité initiale à 1
+//     // animation: fadeOut 2s 2S forwards; // Utilisation de l'animation fadeOut pendant 2 secondes
+
+//     // @keyframes fadeOut {
+//     //   from {
+//     //     opacity: 1; // Opacité de départ
+//     //   }
+//     //   to {
+//     //     opacity: 0; // Opacité finale
+//     //   }
+//     // }
+//   }
+// }
