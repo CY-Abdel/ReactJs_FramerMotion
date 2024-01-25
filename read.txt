@@ -1,0 +1,9 @@
+create a project with vite
+cd to projectname
+npm i
+npm run dev
+
+npm i sass // pour utiliser scss a la place de css
+
+npm i framer-motion // pour utiliser les animations de react
+
