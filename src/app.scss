@@ -22,15 +22,15 @@
 }
 
 html {
-  -webkit-scroll-snap-type: y mandatory;
-  scroll-snap-type: y mandatory;
+  // -webkit-scroll-snap-type: y mandatory;
+  // scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
 section {
   height: 100vh;
-  -webkit-scroll-snap-align: center;
-  scroll-snap-align: center;
+  // -webkit-scroll-snap-align: center;
+  // scroll-snap-align: center;
 }
 
 /* app.scss */

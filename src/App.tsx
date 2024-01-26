@@ -6,6 +6,7 @@ import Navbar from './components/navbar/Navbar';
 import TestFramerMotion from './TestFramerMotion';
 import Sidebar from './components/sidebar/Sidebar';
 import Hero from './components/hero/Hero';
+import Parallax from './components/parallax/Parallax';
 
 const App = () => {
   return (
@@ -14,12 +15,12 @@ const App = () => {
         <Navbar />
         <Hero />
       </section>
+      <section id='Service'><Parallax type="service" /></section>
       <section id='About'>About</section>
-      <section id='Service'>Services</section>
-      <section>Parallax</section>
+      <section id='Portfolio'><Parallax type="portfolio" /></section>
       <section>Portfolio1</section>
       <section>Portfolio2</section>
-      <section id='Portfolio'>Portfolio3</section>
+      <section>Portfolio3</section>
       <section id='Contact'>Contact</section>
 
       {/* <TestFramerMotion />
