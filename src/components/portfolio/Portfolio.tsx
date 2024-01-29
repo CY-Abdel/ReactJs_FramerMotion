@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { motion, useScroll } from 'framer-motion'
+import { motion, useScroll, useSpring } from 'framer-motion'
 
 import './portfolio.scss'
 
@@ -52,19 +52,30 @@ const Single: React.FC<SingleProps> = ({ item }) => {
 
 const Portfolio = () => {
 
-  const {scrollYProgress} = useScroll();
+  const ref = useRef<HTMLDivElement>(null);
 
-  const ref = useRef()
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end end", "start start"]
+  });
+
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 300,
+    damping: 25,
+  })
 
   return (
-    <div className='portfolio'>
+    <div className='portfolio' ref={ref}>
 
       <div className="progress">
         <h1>Projets phares</h1>
 
-        <div className="progressBar">
+        <motion.div
+          className="progressBar"
+          style={{ scaleX }}
+        >
 
-        </div>
+        </motion.div>
       </div>
 
       {items.map(item => (

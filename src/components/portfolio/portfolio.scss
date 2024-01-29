@@ -1,3 +1,21 @@
 .portfolio {
-  
+  position: relative;
+
+  .progress {
+    //  Lorsque vous utilisez position: sticky, vous devez spécifier une valeur pour au moins une des propriétés
+    // top, right, bottom ou left
+    // pour indiquer le point de référence à partir duquel l'élément se comportera comme collant (sticky).
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    text-align: center;
+    color: orange;
+    font-size: 28px;
+
+    .progressBar {
+      height: 8px;
+      background-color: white;
+    }
+  }
 }
