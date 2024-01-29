@@ -35,9 +35,9 @@ const App = () => {
 
       <Portfolio />
 
-      <section id='Contact'>
+      {/* <section id='Contact'>
         <Contact />
-      </section>
+      </section> */}
 
       {/* <TestFramerMotion />
       <TestFramerMotion /> */}

@@ -5,7 +5,7 @@ import './services.scss'
 
 const variants = {
   initial: {
-    x: -500,
+    x: -150,
     y: 100,
     opacity: 0,
   },

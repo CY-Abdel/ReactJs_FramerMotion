@@ -22,15 +22,16 @@
 }
 
 html {
-  -webkit-scroll-snap-type: y mandatory;
-  scroll-snap-type: y mandatory;
+  // -webkit-scroll-snap-type: y mandatory;
+  // scroll-snap-type: y mandatory;
+  // scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
 section {
   height: 100vh;
-  -webkit-scroll-snap-align: center;
-  scroll-snap-align: center;
+  // -webkit-scroll-snap-align: center;
+  // scroll-snap-align: center;
 }
 
 /* app.scss */
@@ -55,7 +56,23 @@ a {
   color: inherit; //parent is body == lignthgray
 }
 
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
 
+@mixin tablet {
+  @media (max-width: 938px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
 
 // .course {
 //   height: 100vh;

@@ -1,3 +1,5 @@
+@import '../../app.scss';
+
 .cursor {
   width: 50px;
   height: 50px;
@@ -5,4 +7,8 @@
   border: 1px solid white;
   position: fixed;
   z-index: 1000;
+
+  @include mobile {
+    display: none; // ne pas afficher le cercle qui suit la souris sur un ecran mobile car on utilise nos doigts
+  }
 }

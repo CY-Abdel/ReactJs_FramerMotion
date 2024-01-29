@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .services {
   background: linear-gradient(180deg, #0c0c1d, #111132);
   height: 100%;
@@ -15,6 +17,12 @@
     align-items: center;
     gap: 20px;
 
+    @include mobile {
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
     p {
       font-weight: 200;
       font-size: 20px;
@@ -26,6 +34,10 @@
       width: 500px;
       border: none;
       border-top: 0.5px solid gray;
+
+      @include mobile {
+        width: 300px;
+      }
     }
   }
 
@@ -36,21 +48,41 @@
     flex-direction: column;
     align-items: center;
 
+    @include mobile {
+      width: 100%;
+      padding: 1rem 0;
+    }
+
     .title {
       display: flex;
       align-items: center;
       gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
 
       img {
         width: 170px;
         height: 70px;
         object-fit: cover;
         border-radius: 50px;
+
+        @include mobile {
+          width: 130px;
+          height: 40px;
+        }
       }
 
       h1 {
         font-size: 60px;
         font-weight: 100;
+
+        @include mobile {
+          font-size: 26px;
+        }
       }
 
       button {
@@ -60,6 +92,12 @@
         background-color: orange;
         border: none;
         font-size: 20px;
+
+        @include mobile {
+          font-size: 14px;
+          width: 130px;
+          height: 40px;
+        }
       }
     }
   }
@@ -71,6 +109,11 @@
     max-width: 1100px;
     margin: auto;
 
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+    }
+
     .box {
       padding: 30px;
       border: 0.5px solid gray;
@@ -80,11 +123,33 @@
       justify-content: space-between;
       gap: 10px;
 
+      @include mobile {
+        padding: 10px;
+        border: none;
+        align-items: center;
+        gap: 0px;
+      }
+
+      p {
+        @include mobile {
+          display: none;
+        }
+      }
+
       button {
         padding: 10px;
         background-color: orange;
         border: none;
         cursor: pointer;
+
+        @include mobile {
+          background-color: transparent;
+          border: 1px solid orange;
+          border-radius: 5px;
+          color: orange;
+          width: 50%;
+          padding: 5px;
+        }
       }
     }
   }
