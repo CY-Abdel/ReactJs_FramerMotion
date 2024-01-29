@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 import './services.scss'
@@ -30,6 +30,7 @@ const Services = () => {
 
 
   return (
+
     <motion.div
       className='services'
       variants={variants}
@@ -37,7 +38,6 @@ const Services = () => {
       // animate='animate'
       // pour declencher l'animation quand on arrive sur la div
       // whileInView="animate"
-
       // declencher l'anime apres une certaine marge
       ref={ref}
       animate={isInView && "animate"}
@@ -46,7 +46,6 @@ const Services = () => {
         <p>Portez votre attention sur l'évolution et le développement <br />de votre marque</p>
         <hr />
       </motion.div>
-
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <img src="/people.webp" alt="people" />
@@ -61,7 +60,6 @@ const Services = () => {
           <button>WHAT WE DO ?</button>
         </div>
       </motion.div>
-
       <motion.div className="listContainer" variants={variants}>
         <motion.div className="box" whileHover={{ background: "lightgray", color: "black" }}>
           <h2>titre</h2>

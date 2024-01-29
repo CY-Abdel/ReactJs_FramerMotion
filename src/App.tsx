@@ -1,13 +1,12 @@
 // 
-import React from 'react'
 
 import "./app.scss"
 import Navbar from './components/navbar/Navbar';
-import TestFramerMotion from './TestFramerMotion';
-import Sidebar from './components/sidebar/Sidebar';
+// import TestFramerMotion from './TestFramerMotion';
 import Hero from './components/hero/Hero';
 import Parallax from './components/parallax/Parallax';
-import Services from './components/services/services';
+import Services from './components/services/Services';
+import Portfolio from './components/portfolio/Portfolio';
 
 const App = () => {
   return (
@@ -29,9 +28,9 @@ const App = () => {
       <section id='Portfolio'>
         <Parallax type="portfolio" />
       </section>
-      <section>Portfolio1</section>
-      <section>Portfolio2</section>
-      <section>Portfolio3</section>
+
+      <Portfolio />
+
       <section id='Contact'>Contact</section>
 
       {/* <TestFramerMotion />

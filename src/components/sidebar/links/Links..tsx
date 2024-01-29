@@ -12,7 +12,8 @@ const variants = {
   },
   closed: {
     transition: {
-      staggerChildren: 0.05,
+      // staggerChildren: 0.05,
+      staggerChildren: 0.09,
       staggerDirection: -1, // sens inverse 
     }
   }
