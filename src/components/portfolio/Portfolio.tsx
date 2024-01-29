@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useSpring } from 'framer-motion'
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 
 import './portfolio.scss'
 
@@ -13,7 +13,7 @@ const items = [
   {
     id: 2,
     title: "Typescript",
-    img: "https://images.pexels.com/photos/14936124/pexels-photo-14936124.jpeg?auto=compress&cs=tinysrgb&w=600",
+    img: "https://images.pexels.com/photos/8904071/pexels-photo-8904071.jpeg?auto=compress&cs=tinysrgb&w=600",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, omnis aut explicabo dolor assumenda fugiat voluptatum molestiae, doloremque, facilis architecto tempora velit dolorem sapiente quos consectetur. Est, doloribus tenetur? Quas?"
   },
   {
@@ -25,7 +25,7 @@ const items = [
   {
     id: 4,
     title: "Java Spring",
-    img: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600",
+    img: "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg?auto=compress&cs=tinysrgb&w=600",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, omnis aut explicabo dolor assumenda fugiat voluptatum molestiae, doloremque, facilis architecto tempora velit dolorem sapiente quos consectetur. Est, doloribus tenetur? Quas?"
   },
 ]
@@ -43,9 +43,35 @@ interface SingleProps {
 
 // const Single = ({ item }) => {
 const Single: React.FC<SingleProps> = ({ item }) => {
+
+  const ref = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    // offset: ["start start", "end start"]
+  });
+
+  // const y = useTransform(scrollYProgress, [0, 1], ["0%", "- 300%"]);
+
+  const y = useTransform(scrollYProgress, [0, 1], [-400, 400]);
+
   return (
     <section>
-      {item.title}
+      <div className="container">
+        <div className='wrapper'>
+
+          <div className="imageContainer" ref={ref}>
+            <img src={item.img} alt="itemImg" />
+          </div>
+
+          <motion.div className="textContainer" style={{ y }}>
+            <h2>{item.title}</h2>
+            <p>{item.desc}</p>
+            <button>Demo</button>
+          </motion.div>
+
+        </div>
+      </div>
     </section>
   )
 }
@@ -74,7 +100,6 @@ const Portfolio = () => {
           className="progressBar"
           style={{ scaleX }}
         >
-
         </motion.div>
       </div>
 
